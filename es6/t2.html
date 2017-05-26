@@ -1,0 +1,44 @@
+<html>
+<head>
+  <title>test</title>
+</head>
+<body>
+
+<script>
+
+var test = 'itest';
+let test1 = 'itest1';
+const test2 = 'itest2';
+
+hosting();
+
+function hosting(){
+  console.log('函数提升');
+}
+
+
+/////// 下面的生不起来
+var func = function(){
+  console.log('sheng ? ');
+}
+func();
+
+///
+class mycls{
+
+
+
+}
+
+// test2 = 'ttt'; // error 
+
+console.log(window.test);
+console.log(test1);
+console.log(test2);
+
+
+
+</script>
+
+</body>
+</html>
