@@ -1,0 +1,61 @@
+<html>
+<head>
+
+</head>
+<body>
+<script>
+
+// 对象练习
+
+class man{
+
+  // 这样些是错误的
+  // var name='n';
+  // var sex='s';
+
+  constructor (props){
+    this.name = props.name;
+    this.sex = props.sex;
+  }
+
+  // 在类里面 不能加上function 修饰 
+  say(){
+    console.log(this.name + ' say '+arguments[0]);
+  }
+
+}
+
+let m = new man({name:'hualan',sex:"nan"}); // constructor 构造函数 初始化变量
+// m.name = 'hualan v2'; // 可以改变name值
+m.say('ni hao');
+
+
+// 继承
+class yao extends man{
+
+  constructor(props){
+    super(props); // 父类的先继承
+    this.rank = props.rank; // 妖怪自己的等级
+
+  }
+
+  //
+  changFace(){
+    console.log(this.name+' is begin changFace'+this.rank);
+  }
+
+  // 多态 定义自己的say 也可以继承
+  say(){
+    alert('i am say');
+  }
+
+}
+
+let y = new yao({name:'yaoname',sex:'renyao',rank:99});
+y.say('kaishi bian shen');
+y.changFace();
+
+
+</script>
+</body>
+</html>
